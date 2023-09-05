@@ -1,0 +1,666 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --text-color:black;
+    --text-hover:rgb(187, 187, 25);
+    --secon-bg-color:goldenrod;
+    --hover-color:goldenrod;
+}
+
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--hover-color);
+    border-radius: 5rem;
+}
+
+/* This the header section including the navbar/////////////////////////////// */
+header{
+    display: flex;
+    height: 8vh;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+    background: white;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.loggo-picture i{
+    color: goldenrod;
+    font-size: 50px;
+}
+
+.logo{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300px;
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+    transition: all ease 5s;
+}
+
+.logo i span{
+    color: var(--text-hover);
+    text-shadow: 2px 2px black;
+    padding-right: 10px;   
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding-left: 200px;
+    
+    
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500px;
+    font-size: large;
+
+}
+
+.nav ul li:hover{
+    border-bottom: 3px solid goldenrod;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+   
+}
+
+.nav ul li a:hover
+{
+    color: var(--text-hover);
+}
+
+#menu-icon{
+    font-size: 1.8rem;
+    margin-left: 250px;
+    cursor: pointer;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 2px;
+    z-index: 300;
+    visibility: hidden;
+}
+
+#menu-sidebar{
+    display: none;
+}
+
+#cart i{
+    font-size: 2.3rem;
+    margin-right: 30px;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+/* The css for the hero section ////////////////////////////////////////////////////////////*/
+#hero{
+    
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.hero-container{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 10px;
+   justify-content: center;
+}
+
+#food {
+   margin-top: 30px;
+    height: 80vh;
+    width: 60vw;
+    position: relative;
+    background: url("/img/burge1.png");
+    background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+    animation-name: hero;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    transition: all linear 2s;
+}
+
+
+.showcase{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.showcase h1{
+    font-size: 50px;
+    font-weight: 500px;
+    margin-bottom: 10px;
+}
+
+.showcase h3{
+    font-size: 20px;
+}
+
+.showcase a{
+    width: 20%;
+    height: 10%;
+    text-decoration: none;
+    background: red;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 200px;
+    border-radius: 10px;
+}
+
+#art{
+    background-color:whitesmoke
+}
+
+#art h1{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color:goldenrod;
+    margin-top: 10px;
+
+}
+
+/*//////// The css for the chef section //////////////////////////////////////////////////*/
+#chefs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    min-height: 70vh;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    grid-gap: 2em;
+}
+
+#chef{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+#chef img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#talk{
+    margin-bottom: 50px;
+}
+
+#talk h3{
+    color: goldenrod;
+    font-weight: 300;
+    font-style: italic;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#talk h4{
+    color:black;
+    font-weight: 600em;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    text-align: left;
+}
+
+#talk p{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.btn{
+    width: 20%;
+    height: 40px;
+    background:red;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+.btn:hover{
+    background:goldenrod;
+    transform: rotate(360deg);
+    transition: all ease 5s;
+}
+
+
+/* The css for the bussiness section /////////////////////////////////////////////////*/
+#business{
+    background: #ffff;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#business h1, h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#business h1{
+    color: goldenrod;
+    font-size: larger;
+}
+
+#business h2{
+    font-size: x-large;
+    font-weight: 300px;
+}
+.container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+#menu{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(270px, 1fr));
+    gap: 6rem;
+}
+
+
+.menu-item{
+    position: relative;
+    background: whitesmoke;
+    height: 50vh;
+    width: 120%;
+    top: 0;
+    left: 0;
+    box-shadow: 10px 20px 10px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: hidden;
+}
+
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+    
+    
+}
+
+.pic img{
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ddd;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+.menu-contents{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    width: 50%;
+    height: 30%;
+    background:linear-gradient(rgba(0,0,0,0.2),#123d3f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    opacity: 0;
+}
+
+.menu-item:hover .menu-contents{
+    opacity: 3;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-family: 'Hurricane';
+    font-size: 20px;
+    font-weight: 300px;
+    font-style: italic;
+}
+
+.conts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conts i{
+    font-size: 2.5rem;
+    color: goldenred;
+    cursor: pointer;
+    color:white;
+}
+
+.conts i:hover{
+    color: red;
+}
+
+
+/* This is the styling for the signup////////////////////////////////////////////*/
+.signup{
+    background:white;
+    width: 30%;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    z-index: 500;
+    visibility: hidden;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.30) ;
+    /* animation: sign ;
+    animation-delay: 6s;
+    animation-duration: 10s;
+    animation-iteration-count: 4; */
+}
+
+.show{
+    visibility: visible;
+}
+
+.signup h1{
+text-align: center;
+font-size: xx-large;
+}
+.signup span{
+    color: goldenrod;
+    font-style: italic;
+    text-shadow: 2px 2px black;
+}
+
+.signup form {
+    text-align: center;
+    max-width: 20rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+   display: block;
+   justify-content: center;
+   align-items: center;
+}
+
+.email h4{
+    text-align: left;
+    color: goldenrod;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.email input[type="email"]{
+    width: 150%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid goldenrod;
+    margin-bottom: 30px;
+}
+
+.password h4{
+    text-align: left;
+    color: goldenrod;
+    font-family: 'Poppins', sans-serif; 
+    margin-bottom: 10px;
+}
+
+.password input[type="password"]{
+    width: 150%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid goldenrod;
+    margin-bottom: 10px;
+}
+
+.password input[type="text"]{
+    width: 150%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid goldenrod;
+    margin-bottom: 10px;
+}
+
+.signup input[type="submit"]{
+    outline: none;
+    color: white;
+    border: none;
+    background: goldenrod;
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+}
+
+.signup input[type="submit"]:hover{
+    cursor: pointer;
+}
+.close{
+    display: flex;
+}
+
+.close input[type="submit"]{
+    outline: none;
+    color: white;
+    border: none;
+    background: goldenrod;
+    width: 20px;
+    height: 20px;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.close input[type="submit"]:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    transition: all ease ;
+    background:rgb(16, 15, 15);
+    z-index: 100;
+    position: fixed;
+    pointer-events: none;
+}
+
+.check{
+   display: flex;
+   justify-content: left;
+   margin-bottom: 20px;
+}
+
+/* ////////////key frame for the hero section //////////*/
+@keyframes hero {
+    0%{
+        background-image: url("/img/pizza.png");
+    }
+    20%{
+        background-image: url("/img/hero1.png");
+    }
+    40%{
+        background-image: url("/img/hero2.png");
+    }
+    60%{
+        background-image: url("/img/hero3.png");
+    }
+    70%{
+        background-image: url("/img/burge1.png");
+    }
+}
+
+/* ////This is the CSS code for the media querry ////////////////////////////////*/
+
+@media (max-width:991px) {
+    .nav{
+        display: none;
+    }
+    #chefs{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #art h1{
+        text-align: center;
+    }
+    #talk{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hero-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 3em;
+     }
+    #menu{
+        grid-template-columns: repeat(1,minmax(270px,1fr));
+    }
+    .showcase{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    .showcase h1{
+        font-weight: 200px;
+        font-size: 35px;
+    }
+    .showcase h3{
+        font-weight: 150px;
+        font-size: 15px;
+    }
+    .showcase a{
+        width: 40%;
+        height: 20%;
+    }
+    .menu-item{
+        width: 150%;
+    }
+    #food{
+        top: -30%;
+        left: 12%;
+        height: 100vh;
+        width: 80vw;
+    }
+    .pic{
+        margin-right: 170px;
+    }
+    .menu-contents{
+        width: 25%;
+        left: 120px;
+        height: 40%;
+        top: 90px;
+    }
+    .info i{
+      padding-right: 200px;
+    }
+    .signup{
+        background:white;
+        width: 80%;
+        height: 70%;
+        position: fixed;
+        top: 50%;
+        left: 50%;      
+    }
+    #menu-icon{
+        visibility: visible;
+    }
+    #menu-sidebar{
+        display: block;
+        position: fixed;
+        top: 0;
+        left:0;
+        background:white;
+        height: 100vh;
+        width: 100%;
+        z-index: 6008;
+        overflow: hidden;
+        z-index: 10002;
+        visibility: hidden;
+        transition: 0.3s linear;
+    }
+    .close-menu i{
+        background: goldenrod;
+        font-size: 2rem;
+        color: white;
+    }
+    .close-menu i:hover{
+        cursor: pointer;
+    }
+    .menu-itemss{
+        display: flex;
+        flex-direction:column;
+        margin-top: 40px;
+    }
+    .back{
+        width: 100%;
+        background: goldenrod;
+        height: 10vh;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .back a{
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        font-size: x-large;
+
+    }
+
+}
